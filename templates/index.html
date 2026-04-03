@@ -1,14 +1,22 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
     <title>Student Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Add Student</h1>
-    <form method="POST" action="/add">
-        <input type="text" name="name" placeholder="Student name" required>
-        <button type="submit">Add</button>
-    </form>
-    <a href="/students">View Students</a>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="max-w-md mx-auto mt-20 bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Add Student</h1>
+        <form method="POST" action="/add" class="space-y-4">
+            <input type="text" name="name" placeholder="Student name" required 
+                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition">
+                Add Student
+            </button>
+        </form>
+        <a href="/students" class="block mt-4 text-center text-blue-600 hover:text-blue-800 font-semibold">
+            View All Students →
+        </a>
+    </div>
 </body>
 </html>
