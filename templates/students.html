@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Manager</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form method="POST" action="/add">
+        <input type="text" name="name" placeholder="Student name" required>
+        <button type="submit">Add</button>
+    </form>
+    <a href="/students">View Students</a>
+</body>
+</html>
+templates/students.html:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+</head>
+<body>
+    <h1>Students</h1>
+    <ul>
+    {% for student in students %}
+        <li>{{ student[1] }}</li>
+    {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>
